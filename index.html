@@ -284,47 +284,47 @@ Welcome to the Business Resources Center!
 </footer>
 
 <script>
-let currentDestinationUrl = ""; // Stores the link for the button
+let currentDestinationUrl = "";
 
 function toggleSubmitButton() {
     const checkbox = document.getElementById('agreement');
     const submitBtn = document.getElementById('submitBtn');
-    
     submitBtn.disabled = !checkbox.checked;
-    
-    if (checkbox.checked) {
-      submitBtn.style.cursor = 'pointer';
-      submitBtn.style.opacity = '1';
-    } else {
-      submitBtn.style.cursor = 'not-allowed';
-      submitBtn.style.opacity = '0.6';
-    }
+    submitBtn.style.opacity = checkbox.checked ? "1" : "0.6";
+    submitBtn.style.cursor = checkbox.checked ? "pointer" : "not-allowed";
 }
 
 function openForm(title, videoUrl, destinationUrl){
-    // Update text, video, and save destination URL
     document.getElementById("formTitle").innerText = title;
-    document.getElementById("presentationVideo").src = videoUrl;
     currentDestinationUrl = destinationUrl;
     
-    // Reset checkbox and button state every time modal opens
+    const videoWrapper = document.getElementById("videoWrapper");
+    const iframe = document.getElementById("presentationVideo");
+
+    // Logic to hide video if "NONE" is passed
+    if(videoUrl === "NONE" || videoUrl === "") {
+        videoWrapper.style.display = "none";
+        iframe.src = "";
+    } else {
+        videoWrapper.style.display = "block";
+        iframe.src = videoUrl;
+    }
+    
     document.getElementById("agreement").checked = false;
     toggleSubmitButton();
-    
     document.getElementById("requestModal").style.display = "block";
 }
 
 function closeForm(){
     document.getElementById("requestModal").style.display = "none";
-    document.getElementById("presentationVideo").src = ""; // Stops the video from playing in the background when closed
+    document.getElementById("presentationVideo").src = "";
 }
 
 function submitForm(){
-    // Open the saved destination URL in a new tab
     if (currentDestinationUrl) {
         window.open(currentDestinationUrl, '_blank');
     }
-    closeForm(); // Close the modal after clicking
+    closeForm();
 }
 
 window.onclick = function(event){
