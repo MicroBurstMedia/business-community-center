@@ -249,29 +249,30 @@ Welcome to the Business Resources Center!
 </div>
 
 <div id="requestModal" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeForm()">X</span>
-<h3 id="formTitle">Service Details</h3>
+    <div class="modal-content">
+        <span class="close" onclick="closeForm()">×</span>
+        <h3 id="formTitle">Service Details</h3>
 
-<div class="video-container">
-    <iframe id="presentationVideo" src="" allowfullscreen></iframe>
-</div>
+        <div id="videoWrapper" class="video-container">
+            <iframe id="presentationVideo" src="" allowfullscreen></iframe>
+        </div>
 
-<form id="agreementForm" onsubmit="event.preventDefault(); submitForm();">
-  <label style="font-size: 12px; cursor: pointer; line-height: 1.5; display: block;">
-    I acknowledge that this web platform provides publicly available referral resources only and I am solely responsible for any and all independent decisions. I agree to the 
-    <a href="#" style="color: blue; text-decoration: underline;">Terms and Conditions</a>.
-    <input type="checkbox" id="agreement" name="agreement" required onchange="toggleSubmitButton()" style="width: auto; margin: 0 0 0 8px; vertical-align: middle; padding: 0;">
-  </label>
+        <form id="agreementForm" onsubmit="event.preventDefault(); submitForm();">
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
+                <p style="font-size: 13px; color: #475569; margin: 0; line-height: 1.5;">
+                    <strong>Professional Acknowledgment:</strong><br>
+                    I acknowledge that this platform provides referral resources only. I am solely responsible for my independent decisions and agree to the policies linked below.
+                </p>
+            </div>
 
-  <br>
+            <label style="font-size: 13px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px;">
+                <input type="checkbox" id="agreement" required onchange="toggleSubmitButton()" style="margin-top: 3px;">
+                <span>I agree to the <a href="#" style="color: #2563eb;">Terms & Conditions</a>.</span>
+            </label>
 
-  <button type="submit" id="submitBtn" disabled>
-    Access Resource
-  </button>
-</form>
-
-</div>
+            <button type="submit" id="submitBtn" disabled>Access Resource</button>
+        </form>
+    </div>
 </div>
 
 <footer>
