@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Business Resources Center</title>
+<title>Business Resources Center | MicroBurstMedia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.launchcart.com/s47561/1695846294-bb2c7ca6-3563-4ba6-a820-11297c768cd2-thumb.png" rel="stylesheet"> <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MicroBurstMedia",
-      "url": "https://microburstmedia.github.io/business-community-center/",
-      "logo": "https://cdn.launchcart.com/s47561/1695846294-bb2c7ca6-3563-4ba6-a820-11297c768cd2-thumb.png",
-      "description": "Business Resources Center Operated by MicroBurstMedia."
-    }
-    </script>
+<meta name="description" content="Access top-tier business resources, tools, funding options, and digital marketing services to scale and optimize your enterprise. Operated by MicroBurstMedia.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet"> 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MicroBurstMedia",
+  "url": "https://microburstmedia.github.io/business-community-center/",
+  "logo": "https://cdn.launchcart.com/s47561/1695846294-bb2c7ca6-3563-4ba6-a820-11297c768cd2-thumb.png",
+  "description": "Business Resources Center Operated by MicroBurstMedia."
+}
+</script>
 
 <style>
 html, body {
@@ -25,29 +28,105 @@ html, body {
     flex-direction: column;
 }
 
-header {
+/* --- NAVIGATION BAR ALIGNMENT --- */
+.top-nav-header {
+    background: #0f172a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.z-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.z-nav-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.z-nav-link {
+    color: #f8fafc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.z-nav-link:hover { color: #60a5fa; }
+
+.z-logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.z-logo-group img {
+    height: 35px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .z-nav-container { flex-direction: column; gap: 15px; }
+}
+/* -------------------------------- */
+
+/* SEO Header */
+.welcome-header {
     background: #0f172a;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.welcome-header h1 {
+    margin: 0;
     font-size: 20px;
     font-weight: 600;
 }
 
 .main-content {
     flex: 1;
-    padding: 30px;
+    padding: 40px 20px;
 }
 
-h2 {
+/* --- TITLE & DESCRIPTION ALIGNMENT --- */
+.intro-section {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
     text-align: center;
-    margin-bottom: 25px;
 }
+
+.intro-section h2 {
+    margin: 0 0 15px 0;
+    font-size: 26px;
+    color: #0f172a;
+}
+
+.intro-section p {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+/* ------------------------------------- */
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
@@ -63,38 +142,41 @@ h2 {
     transform: translateY(-5px);
 }
 
-/* New Image Styles for Cards */
 .card img {
     width: 100%;
     height: 140px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 12px;
-    background: #e2e8f0; /* Fallback color before image loads */
+    background: #e2e8f0; 
 }
 
 .card h3 {
     margin-top: 0;
     font-size: 16px;
+    color: #0f172a;
 }
 
 .card p {
     font-size: 14px;
     color: #555;
+    margin: 0;
 }
 
 footer {
     background: #0f172a;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     font-size: 13px;
+    margin-top: 40px;
 }
 
 footer a {
     color: #60a5fa;
     margin: 0 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* Modal */
@@ -114,7 +196,7 @@ footer a {
     margin: 5% auto;
     padding: 25px;
     width: 90%;
-    max-width: 500px; /* Slightly wider to accommodate video better */
+    max-width: 500px; 
     border-radius: 10px;
 }
 
@@ -123,10 +205,9 @@ footer a {
     margin-bottom: 15px;
 }
 
-/* Responsive Video Container */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     margin-bottom: 20px;
@@ -148,9 +229,9 @@ footer a {
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
+    color: #64748b;
 }
 
-/* Updated Button Styles */
 #submitBtn {
     width: 100%;
     padding: 12px;
@@ -163,13 +244,14 @@ footer a {
     cursor: not-allowed;
     opacity: 0.6;
     transition: 0.2s;
+    margin-top: 15px;
 }
 </style>
 </head>
 
-    <body>
+<body>
 
-    <header>
+    <header class="top-nav-header">
         <div class="z-nav-container">
             <nav class="z-nav-section">
                 <a href="https://microburstmedia.aweb.page/p/c1b8123a-0afb-4a70-8a3f-35139cfdd4f2" class="z-nav-link">About</a>
@@ -190,179 +272,179 @@ footer a {
         </div>
     </header>
 
-<header>
-Welcome to the Business Resources Center!
-</header>
+    <header class="welcome-header">
+        <h1>Welcome to the Business Resources Center!</h1>
+    </header>
 
-<div class="main-content">
+    <div class="main-content">
 
-<h2>Connecting You to Business Products & Services</h2>
-<p style="text-align: center;">Simply select from anyone of the following options shown here to access anytime at your own convenience.</p>
-
-<p style="text-align: center;">Should you run into any issues, please email our support team at microburstmediasolutions@outlook.com for assistance.</p>
-
-<div class="grid">
-
-<div class="card" onclick="openForm('Employment Newsletter', 'NONE', 'https://ratracerebellion.com')">
-        <img src="https://www.sandiegouniontribune.com/wp-content/uploads/migration/2023/06/19/00000188-c6b1-d37d-a1eb-e6b385980000.jpg?w=1600&resize=1600,900" alt="Employment Newsletter">
-        <h3>Employment Newsletter</h3>
-        <p>Find legitimate job opportunities that are looking to hire both onsite and work from home.</p>
-    </div>
-
-<div class="card" onclick="openForm('Legacy Builder Services', 'NONE', 'https://www.macenterpriseconsulting.com')">
-    <img src="https://www.tamaccounting.com/files/business-structuringjpg_13-07-2023_15-58-39.jpg" alt="Business Structure Services">
-    <h3>Business Structure Services</h3>
-    <p>Inquire professional service providers supporting business structuring needs.</p>
-</div>
-
-<div class="card" onclick="openForm('Business Funding Options', 'NONE', 'https://galaxyofstars.org/funding-finance')">
-    <img src="https://altline.sobanco.com/wp-content/uploads/2024/04/Grants-for-Staffing-Agencies-e1713372602554.jpg" alt="Business Funding Options">
-    <h3>Business Funding Options</h3>
-    <p>Access informational resources about business grants and funding opportunities.</p>
-</div>
-
-<div class="card" onclick="openForm('Residential Loan Services', 'NONE', 'https://trussfinancialgroup.com/?fpr=kirkland36')">
-    <img src="https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/SOHL0922025_780x440_mobile.jpeg" alt="Residential Loan Services">
-    <h3>Residential Loan Services</h3>
-    <p>Brokers for home loans who also assist independent contractors and real estate investors.</p>
-</div>
-
-<div class="card" onclick="openForm('Virtual Mailbox Offers', 'NONE', 'https://www.awin1.com/cread.php?awinmid=61685&awinaffid=2021713&ued=https%3A%2F%2Fanytimemailbox.com')">
-    <img src="https://travelingmailbox.com/wp-content/uploads/2022/12/Shutterstock_384024907.jpg" alt="Virtual Mailbox Offers">
-    <h3>Virtual Mailbox Offers</h3>
-    <p>Find virtual mailbox services available to manage your mail online.</p>
-</div>
-
-<div class="card" onclick="openForm('Market Training Course', 'NONE', 'https://onlinebusinessbuilderchallenge.com/get-started/enroll?aid=67274&tid=logic-links-learn-to-earn')">
-    <img src="https://nassonline.in/wp-content/uploads/2025/10/unnamed-1300x731.png" alt="Market Training Course">
-    <h3>Market Training Course</h3>
-    <p>Discover digital marketing course materials to develop your skills.</p>
-</div>
-
-<div class="card" onclick="openForm('Earn Sharing Feedback', 'NONE', 'https://www.userinterviews.com/r/aaxtdqawd')">
-    <img src="https://learn.g2.com/hubfs/G2CM_CM095_How_to_Action_Reviews-Featured_Blog_Image_V1a.png" alt="Earn Sharing Feedback">
-    <h3>Earn Sharing Feedback</h3>
-    <p>Get paid to express your thoughts online to business brands. It really is that simple.</p>
-</div>
-
-<div class="card" onclick="openForm('Find Legal Resources', 'NONE', 'https://www.loc.gov')">
-    <img src="https://www.legalsupportworld.com/wp-content/uploads/2018/11/Legal-services-blog.jpg" alt="Find Legal Resources">
-    <h3>Find Legal Resources</h3>
-    <p>Access general legal and law informational resources related to services and programs.</p>
-</div>
-
-<div class="card" onclick="openForm('Blog Publishing Network', 'NONE', 'https://logiclinkslearntoearn.wordpress.com/?frame-nonce=995f179355')">
-    <img src="https://www.thebalancemoney.com/thmb/az1h5zcnRhClt_yxeo0RvwmVjKI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-102662948-5b7d2f7cc9e77c00255d26a7.jpg" alt="Blog Publishing Network">
-    <h3>Blog Publishing Network</h3>
-    <p>Get your business success story published and monetized exclusively online.</p>
-</div>
-
-<div class="card" onclick="openForm('Employee Monitoring Software', 'NONE', 'https://www.sentrypc.com/purchase/?clickid=SDt2lbXKfxycRDxxyTRzOXegUku2IXU8NxFzyA0&iradid=200311&ircid=3022&irpid=5090525&iradname=Online%20Tracking%20Link&iradtype=ONLINE_TRACKING_LINK&iradsize=&irmpname=Logic%20Links&irmptype=mediapartner&sharedid=&mp_value1=&mp_value2=&mp_value3=&afsrc=1')">
-    <img src="https://www.scnsoft.com/blog-pictures/software-development-outsourcing/employee-monitoring-software.png" alt="Employee Monitoring Software">
-    <h3>Employee Monitoring Software</h3>
-    <p>Safeguard, control, and monitor your workers' online activities whenever, wherever, as they occur.</p>
-</div>
-
-<div class="card" onclick="openForm('Online Banking Services', 'NONE', 'https://www.sofi.com/')">
-    <img src="https://userway.org/blog/wp-content/uploads/2023/04/online-banking-accessibility.jpg" alt="Online Banking Services">
-    <h3>Online Banking Services</h3>
-    <p>Further your knowledge on the benefits of banking by learning the fundamental topics.</p>
-</div>
-
-<div class="card" onclick="openForm('Information Technology Consultation', 'NONE', 'https://meetings.hubspot.com/kirk-b?uuid=6df8260e-6073-4e83-b9dc-346a4b4dbb85')">
-    <img src="https://s3.ap-south-1.amazonaws.com/media.newtonbyte.com/wp-content/uploads/2025/10/30101634/webp-1-3.webp" alt="Information Technology Consultation">
-    <h3>Information Technology Consultation</h3>
-    <p>Schedule an online consultation with a  business IT service provider.</p>
-</div>
-
-</div>
-</div>
-
-<div id="requestModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeForm()">×</span>
-        <h3 id="formTitle">Service Details</h3>
-
-        <div id="videoWrapper" class="video-container">
-            <iframe id="presentationVideo" src="" allowfullscreen></iframe>
+        <div class="intro-section">
+            <h2>Connecting You to Business Products & Services</h2>
+            <p>Simply select from anyone of the following options shown here to access anytime at your own convenience.</p>
+            <p>Should you run into any issues, please email our support team at microburstmediasolutions@outlook.com for assistance.</p>
         </div>
 
-        <form id="agreementForm" onsubmit="event.preventDefault(); submitForm();">
-            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
-                <p style="font-size: 13px; color: #475569; margin: 0; line-height: 1.5;">
-                    <strong>Professional Acknowledgment:</strong><br>
-                    I acknowledge that this platform provides referral resources only. I am solely responsible for my independent decisions and agree to the policies linked below.
-                </p>
+        <div class="grid">
+
+            <div class="card" onclick="openForm('Employment Newsletter', 'NONE', 'https://ratracerebellion.com')">
+                <img src="https://www.sandiegouniontribune.com/wp-content/uploads/migration/2023/06/19/00000188-c6b1-d37d-a1eb-e6b385980000.jpg?w=1600&resize=1600,900" alt="Employment Newsletter">
+                <h3>Employment Newsletter</h3>
+                <p>Find legitimate job opportunities that are looking to hire both onsite and work from home.</p>
             </div>
 
-            <label style="font-size: 13px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px;">
-                <input type="checkbox" id="agreement" required onchange="toggleSubmitButton()" style="margin-top: 3px;">
-                <span>I agree to the <a href="https://drive.google.com/file/d/1ajQlMeWCI-BpHn43ztnWC-OLXPfk1I_3/view?usp=sharing" style="color: #2563eb;">Terms & Conditions</a>.</span>
-            </label>
+            <div class="card" onclick="openForm('Legacy Builder Services', 'NONE', 'https://www.macenterpriseconsulting.com')">
+                <img src="https://www.tamaccounting.com/files/business-structuringjpg_13-07-2023_15-58-39.jpg" alt="Business Structure Services">
+                <h3>Business Structure Services</h3>
+                <p>Inquire professional service providers supporting business structuring needs.</p>
+            </div>
 
-            <button type="submit" id="submitBtn" disabled>Access Resource</button>
-        </form>
+            <div class="card" onclick="openForm('Business Funding Options', 'NONE', 'https://galaxyofstars.org/funding-finance')">
+                <img src="https://altline.sobanco.com/wp-content/uploads/2024/04/Grants-for-Staffing-Agencies-e1713372602554.jpg" alt="Business Funding Options">
+                <h3>Business Funding Options</h3>
+                <p>Access informational resources about business grants and funding opportunities.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Residential Loan Services', 'NONE', 'https://trussfinancialgroup.com/?fpr=kirkland36')">
+                <img src="https://d32ijn7u0aqfv4.cloudfront.net/wp/wp-content/uploads/raw/SOHL0922025_780x440_mobile.jpeg" alt="Residential Loan Services">
+                <h3>Residential Loan Services</h3>
+                <p>Brokers for home loans who also assist independent contractors and real estate investors.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Virtual Mailbox Offers', 'NONE', 'https://www.awin1.com/cread.php?awinmid=61685&awinaffid=2021713&ued=https%3A%2F%2Fanytimemailbox.com')">
+                <img src="https://travelingmailbox.com/wp-content/uploads/2022/12/Shutterstock_384024907.jpg" alt="Virtual Mailbox Offers">
+                <h3>Virtual Mailbox Offers</h3>
+                <p>Find virtual mailbox services available to manage your mail online.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Market Training Course', 'NONE', 'https://onlinebusinessbuilderchallenge.com/get-started/enroll?aid=67274&tid=logic-links-learn-to-earn')">
+                <img src="https://nassonline.in/wp-content/uploads/2025/10/unnamed-1300x731.png" alt="Market Training Course">
+                <h3>Market Training Course</h3>
+                <p>Discover digital marketing course materials to develop your skills.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Earn Sharing Feedback', 'NONE', 'https://www.userinterviews.com/r/aaxtdqawd')">
+                <img src="https://learn.g2.com/hubfs/G2CM_CM095_How_to_Action_Reviews-Featured_Blog_Image_V1a.png" alt="Earn Sharing Feedback">
+                <h3>Earn Sharing Feedback</h3>
+                <p>Get paid to express your thoughts online to business brands. It really is that simple.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Find Legal Resources', 'NONE', 'https://www.loc.gov')">
+                <img src="https://www.legalsupportworld.com/wp-content/uploads/2018/11/Legal-services-blog.jpg" alt="Find Legal Resources">
+                <h3>Find Legal Resources</h3>
+                <p>Access general legal and law informational resources related to services and programs.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Blog Publishing Network', 'NONE', 'https://logiclinkslearntoearn.wordpress.com/?frame-nonce=995f179355')">
+                <img src="https://www.thebalancemoney.com/thmb/az1h5zcnRhClt_yxeo0RvwmVjKI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-102662948-5b7d2f7cc9e77c00255d26a7.jpg" alt="Blog Publishing Network">
+                <h3>Blog Publishing Network</h3>
+                <p>Get your business success story published and monetized exclusively online.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Employee Monitoring Software', 'NONE', 'https://www.sentrypc.com/purchase/?clickid=SDt2lbXKfxycRDxxyTRzOXegUku2IXU8NxFzyA0&iradid=200311&ircid=3022&irpid=5090525&iradname=Online%20Tracking%20Link&iradtype=ONLINE_TRACKING_LINK&iradsize=&irmpname=Logic%20Links&irmptype=mediapartner&sharedid=&mp_value1=&mp_value2=&mp_value3=&afsrc=1')">
+                <img src="https://www.scnsoft.com/blog-pictures/software-development-outsourcing/employee-monitoring-software.png" alt="Employee Monitoring Software">
+                <h3>Employee Monitoring Software</h3>
+                <p>Safeguard, control, and monitor your workers' online activities whenever, wherever, as they occur.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Online Banking Services', 'NONE', 'https://www.sofi.com/')">
+                <img src="https://userway.org/blog/wp-content/uploads/2023/04/online-banking-accessibility.jpg" alt="Online Banking Services">
+                <h3>Online Banking Services</h3>
+                <p>Further your knowledge on the benefits of banking by learning the fundamental topics.</p>
+            </div>
+
+            <div class="card" onclick="openForm('Information Technology Consultation', 'NONE', 'https://meetings.hubspot.com/kirk-b?uuid=6df8260e-6073-4e83-b9dc-346a4b4dbb85')">
+                <img src="https://s3.ap-south-1.amazonaws.com/media.newtonbyte.com/wp-content/uploads/2025/10/30101634/webp-1-3.webp" alt="Information Technology Consultation">
+                <h3>Information Technology Consultation</h3>
+                <p>Schedule an online consultation with a business IT service provider.</p>
+            </div>
+
+        </div>
     </div>
-</div>
 
-<footer>
-© 2026 Digital Marketing Network, MicroBurstMedia |
-<a onclick="alert('Affiliate Disclosure: We may receive compensation for certain referrals.')">Affiliate Disclosure</a> |
-<a onclick="alert('Privacy Policy: We collect minimal data for referral routing purposes only.')">Privacy Policy</a> |
-<a onclick="alert('Terms of Service: Use of this platform constitutes agreement to this websites policies.')">Terms of Service</a> |
-<a onclick="alert('Legal Disclaimer: We do not provide financial, legal, or employment advice.')">Legal Disclaimer</a>
-</footer>
+    <div id="requestModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">×</span>
+            <h3 id="formTitle">Service Details</h3>
 
-<script>
-let currentDestinationUrl = "";
+            <div id="videoWrapper" class="video-container">
+                <iframe id="presentationVideo" src="" allowfullscreen></iframe>
+            </div>
 
-function toggleSubmitButton() {
-    const checkbox = document.getElementById('agreement');
-    const submitBtn = document.getElementById('submitBtn');
-    submitBtn.disabled = !checkbox.checked;
-    submitBtn.style.opacity = checkbox.checked ? "1" : "0.6";
-    submitBtn.style.cursor = checkbox.checked ? "pointer" : "not-allowed";
-}
+            <form id="agreementForm" onsubmit="event.preventDefault(); submitForm();">
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 15px;">
+                    <p style="font-size: 13px; color: #475569; margin: 0; line-height: 1.5;">
+                        <strong>Professional Acknowledgment:</strong><br>
+                        I acknowledge that this platform provides referral resources only. I am solely responsible for my independent decisions and agree to the policies linked below.
+                    </p>
+                </div>
 
-function openForm(title, videoUrl, destinationUrl){
-    document.getElementById("formTitle").innerText = title;
-    currentDestinationUrl = destinationUrl;
-    
-    const videoWrapper = document.getElementById("videoWrapper");
-    const iframe = document.getElementById("presentationVideo");
+                <label style="font-size: 13px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px;">
+                    <input type="checkbox" id="agreement" required onchange="toggleSubmitButton()" style="margin-top: 3px;">
+                    <span>I agree to the <a href="https://drive.google.com/file/d/1ajQlMeWCI-BpHn43ztnWC-OLXPfk1I_3/view?usp=sharing" style="color: #2563eb;">Terms & Conditions</a>.</span>
+                </label>
 
-    // Logic to hide video if "NONE" is passed
-    if(videoUrl === "NONE" || videoUrl === "") {
-        videoWrapper.style.display = "none";
-        iframe.src = "";
-    } else {
-        videoWrapper.style.display = "block";
-        iframe.src = videoUrl;
+                <button type="submit" id="submitBtn" disabled>Access Resource</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+    © 2026 Digital Marketing Network, MicroBurstMedia |
+    <a onclick="alert('Affiliate Disclosure: We may receive compensation for certain referrals.')">Affiliate Disclosure</a> |
+    <a onclick="alert('Privacy Policy: We collect minimal data for referral routing purposes only.')">Privacy Policy</a> |
+    <a onclick="alert('Terms of Service: Use of this platform constitutes agreement to this websites policies.')">Terms of Service</a> |
+    <a onclick="alert('Legal Disclaimer: We do not provide financial, legal, or employment advice.')">Legal Disclaimer</a>
+    </footer>
+
+    <script>
+    let currentDestinationUrl = "";
+
+    function toggleSubmitButton() {
+        const checkbox = document.getElementById('agreement');
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = !checkbox.checked;
+        submitBtn.style.opacity = checkbox.checked ? "1" : "0.6";
+        submitBtn.style.cursor = checkbox.checked ? "pointer" : "not-allowed";
     }
-    
-    document.getElementById("agreement").checked = false;
-    toggleSubmitButton();
-    document.getElementById("requestModal").style.display = "block";
-}
 
-function closeForm(){
-    document.getElementById("requestModal").style.display = "none";
-    document.getElementById("presentationVideo").src = "";
-}
+    function openForm(title, videoUrl, destinationUrl){
+        document.getElementById("formTitle").innerText = title;
+        currentDestinationUrl = destinationUrl;
+        
+        const videoWrapper = document.getElementById("videoWrapper");
+        const iframe = document.getElementById("presentationVideo");
 
-function submitForm(){
-    if (currentDestinationUrl) {
-        window.open(currentDestinationUrl, '_blank');
+        if(videoUrl === "NONE" || videoUrl === "") {
+            videoWrapper.style.display = "none";
+            iframe.src = "";
+        } else {
+            videoWrapper.style.display = "block";
+            iframe.src = videoUrl;
+        }
+        
+        document.getElementById("agreement").checked = false;
+        toggleSubmitButton();
+        document.getElementById("requestModal").style.display = "block";
     }
-    closeForm();
-}
 
-window.onclick = function(event){
-    if(event.target == document.getElementById("requestModal")){
+    function closeForm(){
+        document.getElementById("requestModal").style.display = "none";
+        document.getElementById("presentationVideo").src = "";
+    }
+
+    function submitForm(){
+        if (currentDestinationUrl) {
+            window.open(currentDestinationUrl, '_blank');
+        }
         closeForm();
     }
-}
-</script>
+
+    window.onclick = function(event){
+        if(event.target == document.getElementById("requestModal")){
+            closeForm();
+        }
+    }
+    </script>
 
 </body>
 </html>
